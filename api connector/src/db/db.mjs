@@ -4,7 +4,7 @@ async function connectToDatabase() {
     // investingApps
     // projectApps
       try {
-        await mongoose.connect(`mongodb://localhost:27017/investingApps`, {
+        await mongoose.connect(process.env.DB_URL, {
           useNewUrlParser: true,
           useUnifiedTopology: true,
         });
